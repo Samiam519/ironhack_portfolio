@@ -1,0 +1,438 @@
+<style type="text/css">
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+	text-align: center;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*my code*/
+nav{
+	position: fixed;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 70px;
+	width: 100%;
+	background-color: #00A2DD;
+	/*sticky, doesnt work*/
+	top: 0;
+	z-index: 2;
+}
+nav ul li a {
+	color: #052848;
+	float: right;
+	display: inline;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-top: -84px;
+	margin-right: 200px;
+	line-height: 70px;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	background-color: #052848;
+	color: #00A2DD;
+}
+.banner img{
+	margin-top: 70px;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.banner h1 {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 55px;
+	z-index: 1;
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	color: #D0D9D4;
+	animation: fadeIn;
+}
+h2 {
+	font-weight: 400;
+	text-align: center;
+	font-size: 25px;
+	color: #052848;
+}
+h3 {
+	font-weight: 400;
+	color: #00A2DD;
+}
+p{
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	line-height: 15px;
+}
+img.center {
+	display: block;
+	margin: 0 auto;
+}
+.smolAvatar{
+	width: 60px;
+	border-radius: 60px;
+	padding-top: 5px;
+}
+.avatar{
+	border-radius: 150px;
+	width: 150px;
+}
+.aboutme{
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.about2{
+	padding-left: 4%; 
+	height: 250px;
+}
+.about-smol{
+	background-color: #D0D9D4;
+	float: left;
+	width: 29%;
+	margin: 1%;
+	margin-top: 2%;
+}
+.skills-tab {
+	margin-right: 25px;
+}
+.experience-tab{
+	margin-right: 102px;
+}
+.about-me-tab{
+	margin-right: 220px;
+}
+.experience{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.work{
+	margin: 50px;
+	height: 150px;
+}
+.work-logo{
+	width: 30%;
+	float: left;
+	height: 200px;
+}
+.work-logo img{
+	display: block;
+	width: 100px;
+	margin: 0px auto;
+}
+.work-desc{
+	width: 60%;
+	float: right;
+	height: 100%;
+	margin-right: 5%;
+}
+.work-desc p{
+	margin: 0px auto;
+}
+.skills{
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 20%;
+  margin-bottom: 30%;
+}
+.outer-bar{
+	width: 100%;
+	height: 40px;
+}
+.inner-bar {
+	height: 40px;
+	margin-bottom: 5px;
+	color: white;
+}
+.inner-bar p{
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 40px;
+	margin: 0px auto;
+}
+.skill-1{
+	background-color: #00A2DD;
+	width: 75%;
+}
+.skill-2{
+	background-color: #052848;
+	width: 50%;
+}
+.skill-3{
+	background-color: #D0D9D4;
+	width: 65%;
+}
+.skill-4{
+	background-color: #00A2DD;
+	width: 60%;
+}
+.skill-5{
+	background-color: #052848;
+	width: 65%;
+}
+.skill-6{
+	background-color: #D0D9D4;
+	width: 90%;
+}
+.skill-7{
+	background-color: #00A2DD;
+	width: 85%;
+}
+footer {
+	height: 60px;
+	background-color: #00A2DD;
+	color: white;
+	text-align: center;
+}
+footer p {
+	line-height: 60px;
+}
+footer a{
+	text-decoration: none;
+	color: white;
+}
+footer span{
+	color: red;
+}
+/*this is a hack*/
+.group:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+/*animations*/
+/*=== Trigger  ===*/
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+/*=== Optional Delays, change values here  ===*/
+.one {
+-webkit-animation-delay: 0.4s;
+-moz-animation-delay: 0.4s;
+animation-delay: 0.4s;
+}
+ 
+.two {
+-webkit-animation-delay: 1.7s;
+-moz-animation-delay: 1.7s;
+animation-delay: 1.7s;
+}
+ 
+.three {
+-webkit-animation-delay: 2.3s;
+-moz-animation-delay: 2.3s;
+animation-delay: 2.3s;
+}
+ 
+.four {
+-webkit-animation-delay: 3.3s;
+-moz-animation-delay: 3.3s;
+animation-delay: 3.3s;
+}
+ 
+/*=== Animations start here  ===*/
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+ 
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+ 
+  to {
+    opacity: 1;
+  }
+}
+ 
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+ 
+ 
+/*=== FADE IN DOWN ===*/
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+ 
+/*==== FADE IN UP ===*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+ 
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+ 
+ 
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+ 
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
